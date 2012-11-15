@@ -124,8 +124,6 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"isComplete"]){
-        NSLog(@"callelelleleleleleelle");
-        NSLog(@"data.homeData is %@",homeData);
         
         [self.tableView reloadData];
         
@@ -185,7 +183,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    return 80.0f;
+    return 90.0f;
     
 }
 
@@ -225,10 +223,8 @@
     [spinner setHidden:YES];
     int row = indexPath.row ;
     
-    cell.textLabel.numberOfLines = 5;
+    cell.textLabel.numberOfLines = 7;
 
-    
-    
     NSDictionary *item = [data.homeData objectAtIndex:row];
 
     NSMutableDictionary *tmp = [NSMutableDictionary dictionary];
@@ -243,8 +239,10 @@
     
     cell.textLabel.textColor = [UIColor blackColor];
     cell.textLabel.text = [NSString stringWithFormat:@"%@ ",title];
+
     cell.detailTextLabel.text = [Data formatDate:published];
     [cell.detailTextLabel setTextAlignment:UITextAlignmentCenter];
+    [cell.detailTextLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:13.0]];
     
     [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15.0]];
     
