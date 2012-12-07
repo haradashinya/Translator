@@ -10,6 +10,10 @@
 #import "Data.h"
 #import "DetailViewController.h"
 #import "CustomAlertView.h"
+#import "NUIBarButtonItem.h"
+#import "NUINavigationItem.h"
+#import "NUITableViewCell.h"
+#import "NUITableViewCellRenderer.h"
 
 @interface MainTableViewController : UITableViewController <DataDelegate,UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;

@@ -32,6 +32,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    [NUIAppearance init];
     return YES;
 }
 

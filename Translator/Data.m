@@ -29,8 +29,8 @@
 
 -(NSString *)url
 {
-//    return @"http://afternoon-beach-1116.heroku.com/";
-    return @"http://www20402ue.sakura.ne.jp:9000/";
+//    return @"http://www20402ue.sakura.ne.jp:9000/";
+    return @"http://floating-ocean-1849.herokuapp.com/";
 }
 
 

@@ -7,13 +7,14 @@
 //
 
 #import "MainTableViewController.h"
+#import "NUITableViewCell.h"
 
 @interface MainTableViewController ()
 
 @end
 @implementation MainTableViewController {
     NSArray *homeData;;
-    UITableViewCell *cell;
+    NUITableViewCell *cell;
     Data *data;
     int rowIndex;
     int rowNum;
@@ -42,13 +43,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [NUIRenderer renderNavigationItem:self.navigationBar];
     self.navigationBar.title = @"翻訳ニュース";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.navigationController.navigationBarHidden = NO;
-       UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"?" style:UIBarButtonItemStylePlain target:self action:@selector(showHelp)];          
-       self.navigationItem.rightBarButtonItem = anotherButton;
+    
 
+    
+    [NUIRenderer renderNavigationBar:self.navigationController.navigationBar];
+    self.navigationController.navigationBarHidden = NO;
+       UIBarButtonItem *anotherButton = [[NUIBarButtonItem alloc] initWithTitle:@"?" style:UIBarButtonItemStylePlain target:self action:@selector(showHelp)];
+       self.navigationItem.rightBarButtonItem = anotherButton;
+    
+    [NUIRenderer renderNavigationItem:self.navigationItem];
+    
     rowNum = 10;
     data = [Data shared];
     
@@ -191,8 +200,10 @@
 {
     static NSString *CellIdentifier = @"Cell";
 
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-                              
+    cell = [[NUITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    
+    [NUIRenderer renderTableViewCell:cell];
+
 
     if ([data.homeData count] == 0){
         return cell;
@@ -243,6 +254,8 @@
     cell.detailTextLabel.text = [Data formatDate:published];
     [cell.detailTextLabel setTextAlignment:UITextAlignmentCenter];
     [cell.detailTextLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:13.0]];
+    [NUIRenderer renderTableViewCell:cell];
+
     
     [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:15.0]];
     
