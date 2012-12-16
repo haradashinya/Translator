@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="yFG-z3-jCd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yFG-z3-jCd">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <development version="4500" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -24,7 +25,7 @@
             <objects>
                 <tableViewController id="k8p-gg-7v1" customClass="MainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="2" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cU4-e3-eEP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="gray" id="g3q-ql-ZGR">
@@ -32,7 +33,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ybA-XL-zVQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="744" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="ybA-XL-zVQ">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -48,7 +49,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cdH-z9-3TZ"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="navigationBar" destination="cdH-z9-3TZ" id="i0M-0q-oh6"/>
                         <segue destination="5vv-zZ-h1n" kind="modal" id="Uyo-VZ-aly"/>
@@ -56,26 +58,29 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3P8-jV-MJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="42"/>
+            <point key="canvasLocation" x="628" y="-65"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Tac-No-VdP">
             <objects>
                 <viewController storyboardIdentifier="detailViewController" id="5vv-zZ-h1n" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rvu-yb-58G">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" id="fkg-RV-1ij">
-                                <rect key="frame" x="0.0" y="260" width="320" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkg-RV-1ij">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="195" id="zNh-eG-nLL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LkS-wk-ZBa" customClass="CustomRoundButton">
-                                <rect key="frame" x="290" y="0.0" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkS-wk-ZBa" customClass="CustomRoundButton">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="UUz-w2-0pO"/>
+                                    <constraint firstAttribute="width" constant="30" id="WC0-PF-1Zz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,6 +95,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fkg-RV-1ij" firstAttribute="leading" secondItem="Rvu-yb-58G" secondAttribute="leading" type="default" id="GBq-Wr-e3H"/>
+                            <constraint firstItem="LkS-wk-ZBa" firstAttribute="trailing" secondItem="Rvu-yb-58G" secondAttribute="trailing" type="default" id="XzA-Ub-Qvo"/>
+                            <constraint firstItem="fkg-RV-1ij" firstAttribute="trailing" secondItem="Rvu-yb-58G" secondAttribute="trailing" type="default" id="anB-AB-AwK"/>
+                            <constraint firstAttribute="bottom" secondItem="fkg-RV-1ij" secondAttribute="bottom" constant="5" id="jux-Tw-BbL"/>
+                            <constraint firstItem="LkS-wk-ZBa" firstAttribute="top" secondItem="Rvu-yb-58G" secondAttribute="top" type="default" id="kPF-Wa-dug"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="LkS-wk-ZBa" id="OrH-K5-YgT"/>
@@ -145,6 +157,9 @@
         </class>
         <class className="MainViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

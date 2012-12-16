@@ -51,12 +51,12 @@ SmallLabel {
 }
 NavigationBar {
     font-name: @secondaryFontName;
-    font-size: 20;
-    font-color: @navFontColor;
-    text-shadow-color: clear;
-    background-color-top: #54B4EB;
-    background-color-top: #000000;
-    background-color-bottom: #2FA4E7;
+    font-size: 25;
+    font-color: #808080;
+    background-tint-color: @primaryBackgroundColor;
+
+
+
 }
 SegmentedControl {
     background-tint-color: @primaryBackgroundColorTop;
@@ -100,7 +100,7 @@ View {
     background-image: NUIViewBackground.png;
 }
 UIBarButtonItem {
-    background-color: #9ED5F5;
+    background-color: #c0c0c0;
     font-name: @secondaryFontNameBold;
     font-color: @navFontColor;
     text-shadow-color: clear;

@@ -90,9 +90,6 @@
 }
 -(void)showHelp
 {
-    
-
-
     CustomAlertView *alert = [[CustomAlertView alloc] initWithTitle:@"" message:@"Swipe your finger  at the video page.\n If you do it , description language is changed.And Please wear on earphone.Because it may not hear sound." delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil
      ];
     
