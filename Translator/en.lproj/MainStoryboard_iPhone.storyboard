@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yFG-z3-jCd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yFG-z3-jCd">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4500" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -71,15 +71,16 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkg-RV-1ij">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="195" id="zNh-eG-nLL"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" type="user" id="2JN-js-8rb"/>
+                                    <constraint firstAttribute="height" constant="200" id="yig-k4-lRc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkS-wk-ZBa" customClass="CustomRoundButton">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="UUz-w2-0pO"/>
-                                    <constraint firstAttribute="width" constant="30" id="WC0-PF-1Zz"/>
+                                    <constraint firstAttribute="height" constant="29" type="user" id="UUz-w2-0pO"/>
+                                    <constraint firstAttribute="width" constant="30" type="user" id="WC0-PF-1Zz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="X">
@@ -97,10 +98,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fkg-RV-1ij" firstAttribute="leading" secondItem="Rvu-yb-58G" secondAttribute="leading" type="default" id="GBq-Wr-e3H"/>
-                            <constraint firstItem="LkS-wk-ZBa" firstAttribute="trailing" secondItem="Rvu-yb-58G" secondAttribute="trailing" type="default" id="XzA-Ub-Qvo"/>
-                            <constraint firstItem="fkg-RV-1ij" firstAttribute="trailing" secondItem="Rvu-yb-58G" secondAttribute="trailing" type="default" id="anB-AB-AwK"/>
+                            <constraint firstItem="LkS-wk-ZBa" firstAttribute="trailing" secondItem="Rvu-yb-58G" secondAttribute="trailing" type="user" id="XzA-Ub-Qvo"/>
+                            <constraint firstItem="fkg-RV-1ij" firstAttribute="trailing" secondItem="Rvu-yb-58G" secondAttribute="trailing" type="user" id="anB-AB-AwK"/>
+                            <constraint firstItem="LkS-wk-ZBa" firstAttribute="top" secondItem="Rvu-yb-58G" secondAttribute="top" constant="-1" id="jGq-8v-aia"/>
                             <constraint firstAttribute="bottom" secondItem="fkg-RV-1ij" secondAttribute="bottom" constant="5" id="jux-Tw-BbL"/>
-                            <constraint firstItem="LkS-wk-ZBa" firstAttribute="top" secondItem="Rvu-yb-58G" secondAttribute="top" type="default" id="kPF-Wa-dug"/>
                         </constraints>
                     </view>
                     <connections>
@@ -132,36 +133,6 @@
             <point key="canvasLocation" x="65" y="47"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="CustomRoundButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomRoundButton.h"/>
-        </class>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="tappedCloseButton:"/>
-                <relationship kind="action" name="tappedEnButton:"/>
-                <relationship kind="action" name="tappedJaButton:"/>
-                <relationship kind="outlet" name="closeButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="enButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="jaButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="videoWebView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="MainTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationItem"/>
-            </relationships>
-        </class>
-        <class className="MainViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

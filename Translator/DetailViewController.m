@@ -49,6 +49,7 @@
     [jaButton setHidden:YES];
     [enButton setHidden:YES];
     self.textView.editable = NO;
+    
     self.closeButton.layer.cornerRadius = 15.0f;
     self.closeButton.layer.borderColor = [UIColor whiteColor].CGColor;
     self.closeButton.layer.borderWidth = 3.0f;
@@ -151,10 +152,24 @@
     
     NSURL *youtubeURL = [NSURL URLWithString:[obj valueForKey:@"url"]];
     
-
+    
+    if (self.view.frame.size.height == 548){
+        NSLog(@"lflflflflfflflflfl");
+        
+    youTubeView = [[PSYouTubeView alloc] initWithYouTubeURL:youtubeURL
+                                                      frame:CGRectMake(0,30,320,320)
+                   
+                                                           showNativeFirst:YES];
+    }else{
+        
     youTubeView = [[PSYouTubeView alloc] initWithYouTubeURL:youtubeURL
                                                                      frame:CGRectMake(0,30,320,220)
+                   
                                                            showNativeFirst:YES];
+        
+    }
+    
+    
     youTubeView.layer.opacity =0.0f;
     [PSYouTubeView animateWithDuration:1.0f animations:^{
         youTubeView.layer.opacity = 1.0f;
